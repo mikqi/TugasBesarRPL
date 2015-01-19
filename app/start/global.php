@@ -79,3 +79,10 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/**
+ * CUSTOM Tag buat blade. '{{ }}' diubah menjadi '[[ ]]'
+ * Karena '{{ }}' digunakan oleh AngularJS
+ */
+Blade::setContentTags('[[', ']]');
+Blade::setEscapedContentTags('[[[', ']]]');

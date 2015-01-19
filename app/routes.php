@@ -10,8 +10,9 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
-Route::get('/', function()
+Route::controller('api', 'ApiController');
+ 
+App::missing(function($exception)
 {
-	return View::make('hello');
+	return View::make('index');
 });
