@@ -7,6 +7,7 @@
   <title>My App</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   [[ HTML::style('components/lumx/dist/css/lumx.css') ]] 
+  [[ HTML::style('src/css/components.css') ]] 
   
   [[ HTML::style('components/font-awesome/font-awesome.css') ]] 
 
@@ -26,5 +27,9 @@
   [[ HTML::script('components/angular-route/angular-route.js') ]] 
   [[ HTML::script('components/angular-bootstrap/ui-bootstrap-tpls.min.js') ]] 
   [[ HTML::script('src/js/app.js') ]]
+  [[ HTML::script('src/js/classie.js') ]]
+  [[ HTML::script('src/js/gnmenu.js') ]]
+  <!-- [[ HTML::script('src/js/script.js') ]] -->
+
  </body>
 </html>
