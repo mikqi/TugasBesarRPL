@@ -1,32 +1,41 @@
 <?php
 
 class MenuController extends BaseController {
-	
-	public $restful = true;
 
-	public function getAllData()
+	public function index()
 	{
-		$menu = Menu::with('kategori')->with('pegawai')->get();
-		
-		return Response::json($menu);
+		$menu = Menu::all();
+		return $menu;
 	}
 
-	public function getData($id)
+	public function create()
+	{
+		//
+	}
+
+	public function store()
+	{
+		//
+	}
+
+	public function show($id)
 	{
 		$menu = Menu::find($id);
-		$id = $menu->id_menu;
-		$nama = $menu->nama_menu;
-		$harga = $menu->harga;
-		$kat = $menu->kategori;
-		$peg = $menu->pegawai;
-
-		return Response::json(array('id' => $id, 'nama_menu' => $nama, 'harga' => $harga, 'kategori' => $kat->nama_kategori, 'pegawai' => $peg->nama));
+		return $menu;
 	}
 
-	public function getKategori()
+	public function edit($id)
 	{
-		$kat = Kategori::all();
+		//
+	}
 
-		return Response::json($kat);
+	public function update($id)
+	{
+		//
+	}
+
+	public function destroy($id)
+	{
+		//
 	}
 }

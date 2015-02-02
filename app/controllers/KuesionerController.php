@@ -1,30 +1,41 @@
 <?php
 
 class KuesionerController extends BaseController {
-	
-	public $restful = true;
 
-	public function getAllData()
+	public function index()
 	{
 		$kuesioner = Kuesioner::all();
-		return Response::json($kuesioner);
+		return $kuesioner;
 	}
 
-	public function getData($id)
+	public function create()
+	{
+		//
+	}
+
+	public function store()
+	{
+		//
+	}
+
+	public function show($id)
 	{
 		$kuesioner = Kuesioner::find($id);
-		return Response::json($kuesioner);
+		return $kuesioner;
 	}
 
-	public function getAllDetail()
+	public function edit($id)
 	{
-		$detail = DetailKuesioner::all();
-		return Response::json($detail);
+		//
 	}
 
-	public function getDetail($id)
+	public function update($id)
 	{
-		$detail = DetailKuesioner::find($id);
-		return Response::json($detail);
+		//
+	}
+
+	public function destroy($id)
+	{
+		//
 	}
 }

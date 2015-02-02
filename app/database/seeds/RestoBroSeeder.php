@@ -83,7 +83,7 @@ class RestoBroSeeder extends Seeder {
 			'tempat_lahir'	=>	'Semarang',
 			'tgl_lahir'		=>	'1992-04-04',
 			'jk'			=>	'Perempuan',
-			'no_telp'		=>	'085787',
+			'no_telp'		=>	'085767546775',
 			'email'			=>	'dewi008@yahoo.com',
 			'role'			=>	'CS',
 			'password'		=>	Hash::make('edan')

@@ -1,18 +1,42 @@
 <?php
 
 class PegawaiController extends BaseController {
-	
-	public $restful = true;
 
-	public function getAllData()
+	public function index()
 	{
-		$pegawai = Pegawai::all(); 
-		return Response::json($pegawai);
+		$pegawai = Pegawai::all();
+		return $pegawai;
 	}
 
-	public function getData($id)
+	public function create()
+	{
+		//
+	}
+
+	public function store()
+	{
+		//
+	}
+
+	public function show($id)
 	{
 		$pegawai = Pegawai::find($id);
 		return Response::json($pegawai);
+	}
+
+	public function edit($id)
+	{
+		//
+	}
+
+	public function update($id)
+	{
+		//
+	}
+
+	public function destroy($id)
+	{
+		Pegawai::destroy($id);
+		return Response::json(array('success' => true));
 	}
 }

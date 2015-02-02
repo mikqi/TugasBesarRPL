@@ -1,11 +1,11 @@
 <?php
 
-class BahanController extends BaseController {
+class HasilKuesionerController extends BaseController {
 
 	public function index()
 	{
-		$bahan = BahanBaku::all();
-		return $bahan;
+		$hasil = HasilKuesioner::all();
+		return $hasil;
 	}
 
 	public function create()
@@ -20,8 +20,8 @@ class BahanController extends BaseController {
 
 	public function show($id)
 	{
-		$bahan = BahanBaku::find($id);
-		return $bahan;
+		$hasil = HasilKuesioner::find($id);
+		return $hasil;
 	}
 
 	public function edit($id)

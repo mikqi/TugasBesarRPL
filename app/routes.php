@@ -10,7 +10,7 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-Route::controller('api', 'ApiController');
+//Route::controller('api', 'ApiController');
  
 App::missing(function($exception)
 {
@@ -21,17 +21,29 @@ Route::get('test', function(){
 	return View::make('test');
 });
 
-Route::get('bahan/get/all', array('uses' => 'BahanController@getAllData'));
-Route::get('bahan/get/{id}', array('uses' => 'BahanController@getData'));
 
-Route::get('pegawai/get/all', array('uses' => 'PegawaiController@getAllData'));
-Route::get('pegawai/get/{id}', array('uses' => 'PegawaiController@getData'));
 
-Route::get('menu/get/all', array('uses' => 'MenuController@getAllData'));
-Route::get('menu/get/kategori', array('uses' => 'MenuController@getKategori'));
-Route::get('menu/get/{id}', array('uses' => 'MenuController@getData'));
+Route::group(array('prefix' => 'api'), function() {
 
-Route::get('kuesioner/get/all', array('uses' => 'KuesionerController@getAllData'));
-Route::get('kuesioner/get/{id}', array('uses' => 'KuesionerController@getData'));
-Route::get('kuesioner/get/detail/all', array('uses' => 'KuesionerController@getAllDetail'));
-Route::get('kuesioner/get/detail/{id}', array('uses' => 'KuesionerController@getDetail'));
+    Route::resource('bahan', 'BahanController');
+
+	Route::resource('pegawai', 'PegawaiController');
+
+	Route::resource('menu', 'MenuController');
+
+	Route::resource('kuesioner', 'KuesionerController');
+
+	Route::resource('detail_kuesioner', 'DetailKuesionerController');
+
+	Route::resource('pesanan', 'PesananController');
+
+	Route::resource('pertanyaan', 'PertanyaanController');
+
+	Route::resource('resep', 'ResepController');
+
+	Route::resource('transaksi', 'TransaksiController');
+
+	Route::resource('kategori', 'KategoriController');
+
+	Route::resource('hasil', 'HasilKuesionerController');
+});
