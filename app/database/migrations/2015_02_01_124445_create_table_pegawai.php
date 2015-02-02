@@ -23,7 +23,7 @@ class CreateTablePegawai extends Migration {
 			$table->string('no_telp', 15);
 			$table->string('email', 31);
 			$table->enum('role', array('Admin','Kasir','Koki','Pelayan','Pantry','CS'));
-			$table->string('password', 31);
+			$table->string('password', 64);
 		});
 	}
 
