@@ -1,0 +1,146 @@
+<!-- NAVBAR -->
+<div class="card bgc-blue-500 tc-white-1">
+  <div class="toolbar" id="gn-menu">
+    <div class="toolbar__left mr">
+
+      <ul id="gn-menu">
+        <li class="gn-trigger">
+          <a class="btn btn--l btn--black btn--icon gn-icon-menu" lx-ripple>
+            <i class="mdi mdi--menu tc-white-1"></i>
+          </a>
+          <nav class="gn-menu-wrapper">
+            <div class="gn-scroller">
+              <ul class="gn-menu">
+                <li class="item">
+                  <i class="icon icon--l icon--flat mdi mdi--shopping-cart"></i>
+                  <a href="/koki/listpesanan">List Pesanan</a>
+                </li>
+                <li class="item">
+                  <i class="icon icon--l icon--flat mdi mdi--grid-on"></i>
+                  <a href="/koki/menu">Table Menu</a>
+                </li>
+              </ul>
+
+            </div>
+            <!-- /gn-scroller -->
+          </nav>
+        </li>
+
+      </ul>
+    </div>
+
+    <span class="toolbar__label fs-title">Resto BRO!</span>
+
+    <div class="toolbar__right">
+      <lx-dropdown position="right" from-top>
+        <button class="btn btn--l btn--black btn--icon" lx-ripple lx-dropdown-toggle>
+          <i class="mdi mdi--more-vert tc-white-1"></i>
+        </button>
+
+        <lx-dropdown-menu>
+          <ul>
+            <li><a class="dropdown-link">Koki</a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-link" href="/">Logout</a>
+            </li>
+          </ul>
+        </lx-dropdown-menu>
+      </lx-dropdown>
+    </div>
+  </div>
+</div>
+
+<!-- CONTAINER -->
+<div class="grid">
+  <div class="grid__col12 indexmin">
+    <div class="card">&nbsp;</div>
+  </div>
+  <div class="grid__col12">
+    <div class="card card-pad">
+
+      <!-- CONTENT -->
+      <!-- TABLE -->
+      <table class="data-table data-table--has-primary data-table--has-secondary">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>ID Menu</th>
+            <th>Nama Menu</th>
+            <th>Harga </th>
+            <th>ID Kategori </th>
+            
+            <th style="width:10%;">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="data-table__clickable-row">
+            <td>
+              1
+            </td>
+            <td>
+              <span>Lorem Ipsum</span>
+            </td>
+            <td>
+              <span>Lorem Ipsum</span>
+            </td>
+            <td>
+              <span>Lorem Ipsum</span>
+            </td>
+            <td>Lorem</td>
+            <td>
+              <button class="btn btn--m btn--red btn--fab" lx-ripple> <i class="mdi mdi--delete"></i> </button>
+              <button class="btn btn--m btn--orange btn--fab" lx-ripple> <i class="mdi mdi--edit"></i> </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- ADD BUTTON -->
+<button class="btn-add btn btn--xl btn--blue btn--fab" ng-click="opendDialog('add-menu')" lx-ripple><i class="mdi mdi--add"></i>
+</button>
+
+
+<!-- MODDAL ADD -->
+<lx-dialog class="dialog dialog--l " id="add-menu" onclose="closingDialog()">
+  <div class="dialog__header">
+    <div class="toolbar bgc-light-blue-500 pl++">
+      <span class="toolbar__label tc-white fs-title">
+        Tambah Data Menu
+      </span>
+    </div>
+  </div>
+
+  <div class="grid-modal dialog__content">
+    <div class="grid">
+      <div class="grid__col12">
+        <lx-text-field label="Nama Menu">
+          <input type="text" ng-model="textFields.lastName">
+        </lx-text-field>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="grid__col12">
+        <lx-text-field label="Harga">
+          <input type="number" ng-model="textFields.lastName">
+        </lx-text-field>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog__actions">
+    <button class="btn btn--m btn--red btn--flat" lx-ripple lx-dialog-close>Cancel</button>
+    <button class="btn btn--m btn--blue btn--flat" lx-ripple>Tambah</button>
+  </div>
+</lx-dialog>
+
+
+
+<!-- SIDEBAR -->
+<script src="src/js/script.js"></script>

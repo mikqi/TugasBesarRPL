@@ -366,7 +366,7 @@ input.gn-search:focus {
 }
 .item i{
     margin-left: 5px;
-    color: #FFB300;
+    color: #2196F3;
 }
 .item a{
     text-decoration: none;
@@ -425,4 +425,110 @@ input.gn-search:focus {
 
 .list-kategori{
     margin-bottom: 50px;
+}
+
+.btn-add{
+    position: fixed !important;
+    right: 3%;
+    bottom: 10%;
+}
+
+.grid-modal{
+    margin-top: 20px;
+    padding: 0 40px;
+}
+
+.grid-margin{
+    margin: 10px 0;
+}
+
+.p\+ {
+  padding: 16px!important;
+}
+
+.btn{
+    z-index: 0;
+}
+
+@media screen and (min-width: 681px){
+.modal-porsi{
+  right: -17%;
+  bottom: 5%;
+  position: fixed;
+}
+}
+@media screen and (max-width: 680px){
+.modal-porsi{
+  right: -17%;
+  bottom: 5%;
+  position: static;
+}
+}
+
+
+.model-porsi input{
+    width: 5%;
+}
+
+.btn-block{
+    width: 100%;
+}
+.card-meja{
+    height: 175px;
+    margin: 10px;
+}
+.list-pesanan {
+    height: 100%;
+    position: absolute;
+}
+.list-content{
+    position: absolute;
+    font-size: 1.3em;
+    left: 35%;
+    color: #888;
+}
+.list-button{
+    position: relative;
+    right: -125%;
+}
+.list-detail-title{
+    font-size: 2em;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 2%;
+    padding-bottom: 1%;
+}
+.list-detail{
+    margin-bottom: 2%;
+}
+.list-total{
+
+}
+.list-separator{
+    border-top: 1px solid #ccc;
+    margin-top: 1%;
+    padding-top: 2%;
+}
+.bayar{
+
+}
+.modal-text-kembalian{
+    font-size: 4em;
+    margin-left: 15%;
+    color: #888;
+    margin-top: 4%;
+}
+.pertanyaan{
+    font-size: 3em;
+    color: #888;
+    text-align: center;;
+
+}
+.jawaban{
+    margin-left: 23%;
+    font-size: 1.5em;
+    color: #888;
+
+}
+.list-jawaban{
+    
 }

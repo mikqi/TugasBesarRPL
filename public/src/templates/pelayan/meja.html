@@ -1,0 +1,382 @@
+<!-- NAVBAR -->
+<div class="card bgc-blue-500 tc-white-1">
+  <div class="toolbar" id="gn-menu">
+    <div class="toolbar__left mr">
+
+      <ul id="gn-menu">
+        <li class="gn-trigger">
+          <a class="btn btn--l btn--black btn--icon gn-icon-menu" lx-ripple>
+            <i class="mdi mdi--menu tc-white-1"></i>
+          </a>
+          <nav class="gn-menu-wrapper">
+            <div class="gn-scroller">
+              <ul class="gn-menu">
+                <li class="item">
+                  <i class="icon icon--l icon--flat mdi mdi--find-in-page"></i>
+                  <a href="/pelayan/meja">Pencarian Meja</a>
+                </li>
+                <li class="item">
+                  <i class="icon icon--l icon--flat mdi mdi--receipt"></i>
+                  <a href="/pelayan/kategori">Kategori Menu</a>
+                </li>
+                <li class="item">
+                  <i class="icon icon--l icon--flat mdi mdi--shopping-cart"></i>
+                  <a href="/pelayan/listpesanan">List Pesanan</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /gn-scroller -->
+          </nav>
+        </li>
+
+      </ul>
+    </div>
+
+    <span class="toolbar__label fs-title">Resto BRO!</span>
+
+    <div class="toolbar__right">
+      <lx-dropdown position="right" from-top>
+        <button class="btn btn--l btn--black btn--icon" lx-ripple lx-dropdown-toggle>
+          <i class="mdi mdi--more-vert tc-white-1"></i>
+        </button>
+
+        <lx-dropdown-menu>
+          <ul>
+            <li><a class="dropdown-link">Pelayan</a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-link" href="/">Logout</a>
+            </li>
+          </ul>
+        </lx-dropdown-menu>
+      </lx-dropdown>
+    </div>
+  </div>
+</div>
+
+<!-- CONTAINER -->
+<div class="grid">
+        <div class="grid__col12">
+          <input type="text" name="no" id="no" ng-model="no">
+          <input type="text" name="class" id="class" ng-model="klass">
+          <button ng-click="addMeja()">CLICK</button>
+          <ul ng-repeat="datum in meja">
+            <li>  <button ng-click="change(datum)">{{ datum.class }}</button>  </li>
+          </ul>
+        </div>
+
+      </div>
+
+<div class="grid">
+  <div class="grid__col12 indexmin">
+    <div class="card">&nbsp;</div>
+  </div>
+  <div class="grid__col12">
+    <div class="card card-pad">
+      <div class="grid__col12 ">
+  
+        <!-- LIST MENU -->
+        <!-- #1 -->
+        <div class="grid grid-margin">
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 1</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 2</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 3</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 4</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- #2 -->
+        <div class="grid grid-margin">
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 5</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 6</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 7</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 8</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- #3 -->
+        <div class="grid grid-margin">
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 9</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 10</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 11</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 12</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- #4 -->
+        <div class="grid grid-margin">
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 13</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 14</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 15</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 16</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- #5 -->
+        <div class="grid grid-margin">
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 17</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 18</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 19</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="grid__col3">
+            <div class="card">
+
+              <div class="card__top card__top--img card-meja bgc-red-500">
+                <strong class="card-title">Meja 20</strong>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple>Proses</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- SIDEBAR -->
+<script src="src/js/script.js"></script>

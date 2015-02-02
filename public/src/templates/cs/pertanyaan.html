@@ -1,0 +1,118 @@
+<!-- NAVBAR -->
+<div class="card bgc-blue-500 tc-white-1">
+  <div class="toolbar" id="gn-menu">
+    <div class="toolbar__left mr">
+
+      <ul id="gn-menu">
+        <li class="gn-trigger">
+          <a class="btn btn--l btn--black btn--icon gn-icon-menu" lx-ripple>
+            <i class="mdi mdi--menu tc-white-1"></i>
+          </a>
+          <nav class="gn-menu-wrapper">
+            <div class="gn-scroller">
+              <ul class="gn-menu">
+                <li class="item">
+                  <i class="icon icon--l icon--flat mdi mdi--lock"></i>
+                  <a href="/">Login</a>
+                </li>
+                <li class="item">
+                  <i class="icon icon--l icon--flat mdi mdi--android"></i>
+                  <a href="#">Settings</a>
+                </li>
+                <li class="item">
+                  <i class="icon icon--l icon--flat mdi mdi--android"></i>
+                  <a href="#">Help</a>
+                </li>
+                <li class="item">
+                  <i class="icon icon--l icon--flat mdi mdi--android"></i>
+                  <a href="#">Archives</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /gn-scroller -->
+          </nav>
+        </li>
+
+      </ul>
+    </div>
+
+    <span class="toolbar__label fs-title">Resto BRO!</span>
+
+    <div class="toolbar__right">
+      <lx-dropdown position="right" from-top>
+        <button class="btn btn--l btn--black btn--icon" lx-ripple lx-dropdown-toggle>
+          <i class="mdi mdi--more-vert tc-white-1"></i>
+        </button>
+
+        <lx-dropdown-menu>
+          <ul>
+            <li><a class="dropdown-link">Action</a>
+            </li>
+            <li><a class="dropdown-link">Another action</a>
+            </li>
+            <li><a class="dropdown-link">Something else here</a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-link dropdown-link--is-header">Header</a>
+            </li>
+            <li><a class="dropdown-link">Separated link</a>
+            </li>
+          </ul>
+        </lx-dropdown-menu>
+      </lx-dropdown>
+
+      <lx-search-filter closed theme="dark"></lx-search-filter>
+    </div>
+  </div>
+</div>
+
+<!-- CONTAINER -->
+<div class="grid">
+  <div class="grid__col12 indexmin">
+    <div class="card">&nbsp;</div>
+  </div>
+  <div class="grid__col12">
+    <div class="card card-pad">
+      <div class="grid">
+        <div class="grid__col12">
+          <div class="pertanyaan">
+            1. Kamu pernah modol ?
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col12">
+          <div class="jawaban">
+            <div class="radio-group">
+              <div class="radio-button kuesioner-jawaban">
+                <input type="radio" id="jawaban1" name="kuesioner" value="1" class="radio-button__input">
+                <label for="jawaban1" class="radio-button__label">Pernah</label>
+              </div>
+
+              <div class="radio-button kuesioner-jawaban">
+                <input type="radio" id="jawaban2" name="kuesioner" value="2" class="radio-button__input">
+                <label for="jawaban2" class="radio-button__label">Belum Pernah</label>
+              </div>
+
+              <div class="radio-button kuesioner-jawaban">
+                <input type="radio" id="jawaban3" name="kuesioner" value="3" class="radio-button__input">
+                <label for="jawaban3" class="radio-button__label">Gak Pernah Modol, karena saya Kim Jong Un</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col3">&nbsp;</div>
+        <div class="grid__col6">
+          <button class="btn btn--m btn--orange btn-block btn--raised" lx-ripple style="margin-top: 4%">Selanjutnya</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SIDEBAR -->
+<script src="src/js/script.js"></script>

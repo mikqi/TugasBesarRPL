@@ -1,0 +1,268 @@
+<!-- NAVBAR -->
+<div class="card bgc-blue-500 tc-white-1">
+  <div class="toolbar" id="gn-menu">
+    <div class="toolbar__left mr">
+
+      <ul id="gn-menu">
+        <li class="gn-trigger">
+          <a class="btn btn--l btn--black btn--icon gn-icon-menu" lx-ripple>
+            <i class="mdi mdi--menu tc-white-1"></i>
+          </a>
+          <nav class="gn-menu-wrapper">
+            <div class="gn-scroller">
+              <ul class="gn-menu">
+                <li class="item">
+                  <i class="icon icon--l icon--flat mdi mdi--grid-on"></i>
+                  <a href="/admin/pegawai">Table Pegawai</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /gn-scroller -->
+          </nav>
+        </li>
+
+      </ul>
+    </div>
+
+    <span class="toolbar__label fs-title">Resto BRO!</span>
+
+    <div class="toolbar__right">
+      <lx-dropdown position="right" from-top>
+        <button class="btn btn--l btn--black btn--icon" lx-ripple lx-dropdown-toggle>
+          <i class="mdi mdi--more-vert tc-white-1"></i>
+        </button>
+
+        <lx-dropdown-menu>
+          <ul>
+            <li><a class="dropdown-link">Admin</a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-link" href="/">Logout</a>
+            </li>
+          </ul>
+        </lx-dropdown-menu>
+      </lx-dropdown>
+    </div>
+  </div>
+</div>
+
+<!-- CONTAINER -->
+<div class="grid">
+  <div class="grid__col12 indexmin">
+    <div class="card">&nbsp;</div>
+  </div>
+  <div class="grid__col12">
+    <div class="card card-pad">
+
+      <!-- CONTENT -->
+      <!-- TABLE -->
+      <table class="data-table data-table--has-primary data-table--has-secondary">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>ID Petugas</th>
+            <th>Nama</th>
+            <th>Role </th>
+            <th>No Telp </th>
+            <th>Email </th>
+            <th style="width:10%;">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- DATA 1 -->
+          <tr class="data-table__clickable-row">
+            <td>
+              1
+            </td>
+            <td>
+              <span>Lorem Ipsum</span>
+            </td>
+            <td>
+              <span>Lorem Ipsum</span>
+            </td>
+            <td>
+              <span>Lorem Ipsum</span>
+            </td>
+            <td>
+              <span>Lorem Ipsum</span>
+            </td>
+            <td>
+              <span>Lorem Ipsum</span>
+            </td>
+            <td>
+              <button class="btn btn--m btn--red btn--fab" lx-ripple> <i class="mdi mdi--delete"></i> </button>
+              <button class="btn btn--m btn--orange btn--fab" lx-ripple> <i class="mdi mdi--edit"></i> </button>
+            </td>
+          </tr>
+          <!-- DATA 2 -->
+          <tr class="data-table__clickable-row">
+            <td>
+              2
+            </td>
+            <td>
+              <span>Lorem Ipsum</span>
+            </td>
+            <td>
+              <span>Lorem Ipsum</span>
+            </td>
+            <td>
+              <span>Lorem Ipsum</span>
+            </td>
+            <td>
+              <span>Lorem Ipsum</span>
+            </td>
+            <td>
+              <span>Lorem Ipsum</span>
+            </td>
+            <td>
+              <button class="btn btn--m btn--red btn--fab" lx-ripple> <i class="mdi mdi--delete"></i> </button>
+              <button class="btn btn--m btn--orange btn--fab" lx-ripple> <i class="mdi mdi--edit"></i> </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- ADD BUTTON -->
+<button class="btn-add btn btn--xl btn--blue btn--fab" ng-click="opendDialog('add-menu')" lx-ripple><i class="mdi mdi--add"></i>
+</button>
+
+
+<!-- MODDAL ADD -->
+<lx-dialog class="dialog dialog--l " id="add-menu" onclose="closingDialog()">
+  <div class="dialog__header">
+    <div class="toolbar bgc-light-blue-500 pl++">
+      <span class="toolbar__label tc-white fs-title">
+        Tambah Data Pegawai
+      </span>
+    </div>
+  </div>
+
+  <div class="grid-modal dialog__content">
+    <!-- NAMA -->
+    <div class="grid">
+      <div class="grid__col12">
+        <lx-text-field label="Nama ">
+          <input type="text" ng-model="textFields.lastName">
+        </lx-text-field>
+      </div>
+    </div>
+    <!-- ALAMAT -->
+    <div class="grid">
+      <div class="grid__col12">
+        <lx-text-field label="Alamat">
+          <input type="text" ng-model="textFields.lastName">
+        </lx-text-field>
+      </div>
+    </div>
+    <!-- TEMPAT LAHIR -->
+    <div class="grid">
+      <div class="grid__col12">
+        <lx-text-field label="Tempat Lahir">
+          <input type="text" ng-model="textFields.lastName">
+        </lx-text-field>
+      </div>
+    </div>
+    <!-- TANGGAL LAHIR -->
+    <div class="grid">
+      <div class="grid__col12">
+        <lx-date-picker model="datepicker.date" label="Tanggal Lahir"></lx-date-picker>
+      </div>
+    </div>
+    <!-- JK -->
+    <div class="grid">
+      <div class="grid__col12">
+
+        <div class="radio-group">
+          <div class="radio-button">
+            <input type="radio" id="laki" name="jk" value="l" class="radio-button__input">
+            <label for="laki" class="radio-button__label">Laki-Laki</label>
+          </div>
+
+          <div class="radio-button">
+            <input type="radio" id="perempuan" name="jk" value="p" class="radio-button__input">
+            <label for="perempuan" class="radio-button__label">Perempuan</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- NOMOR TELEPON -->
+    <div class="grid">
+      <div class="grid__col12">
+        <lx-text-field label="Nomor Telepon">
+          <input type="number" ng-model="textFields.lastName">
+        </lx-text-field>
+      </div>
+    </div>
+    <!-- EMAIL -->
+    <div class="grid">
+      <div class="grid__col12">
+        <lx-text-field label="Email">
+          <input type="email" ng-model="textFields.lastName">
+        </lx-text-field>
+      </div>
+    </div>
+    
+    <!-- ROLE -->
+    <div class="grid">
+      <div class="grid__col12">
+        
+        <div class="radio-group">
+          <div class="radio-button">
+            <input type="radio" id="Admin" name="role" value="admin" class="radio-button__input">
+            <label for="Admin" class="radio-button__label">Admin</label>
+          </div>
+
+          <div class="radio-button">
+            <input type="radio" id="Kasir" name="role" value="kasir" class="radio-button__input">
+            <label for="Kasir" class="radio-button__label">Kasir</label>
+          </div>
+
+          <div class="radio-button">
+            <input type="radio" id="Koki" name="role" value="koki" class="radio-button__input">
+            <label for="Koki" class="radio-button__label">Koki</label>
+          </div>
+
+          <div class="radio-button">
+            <input type="radio" id="Pelayan" name="role" value="Pelayan" class="radio-button__input">
+            <label for="Pelayan" class="radio-button__label">Pelayan</label>
+          </div>
+
+          <div class="radio-button">
+            <input type="radio" id="Pantry" name="role" value="Pantry" class="radio-button__input">
+            <label for="Pantry" class="radio-button__label">Pantry</label>
+          </div>
+
+          <div class="radio-button">
+            <input type="radio" id="CustomerService" name="role" value="Customer Service" class="radio-button__input">
+            <label for="CustomerService" class="radio-button__label">Customer Service</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- PASSWORD -->
+    <div class="grid">
+      <div class="grid__col12">
+        <lx-text-field label="Password">
+          <input type="password" ng-model="textFields.lastName">
+        </lx-text-field>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog__actions">
+    <button class="btn btn--m btn--red btn--flat" lx-ripple lx-dialog-close>Cancel</button>
+    <button class="btn btn--m btn--blue btn--flat" lx-ripple>Tambah</button>
+  </div>
+</lx-dialog>
+
+
+
+<!-- SIDEBAR -->
+<script src="src/js/script.js"></script>
