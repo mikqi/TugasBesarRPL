@@ -16,7 +16,6 @@ class CreateTablePesanan extends Migration {
 		{
 			$table->increments('no_pesanan');
 			$table->date('tgl_pesanan');
-			$table->integer('jumlah');
 
 			$table->integer('no_meja')->unsigned();
 			$table->integer('id_pegawai')->unsigned();

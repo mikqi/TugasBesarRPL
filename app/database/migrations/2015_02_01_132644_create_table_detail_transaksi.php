@@ -19,6 +19,7 @@ class CreateTableDetailTransaksi extends Migration {
 			$table->integer('no_pesanan')->unsigned();
 			$table->integer('id_menu')->unsigned();
 
+			$table->integer('jumlah');
 			$table->integer('subtotal');
 			$table->integer('total');
 			$table->integer('bayar');

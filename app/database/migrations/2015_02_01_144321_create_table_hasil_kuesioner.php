@@ -15,11 +15,11 @@ class CreateTableHasilKuesioner extends Migration {
 		Schema::create('hasil_kuesioner', function(Blueprint $table)
 		{
 			$table->increments('id_hasil');
-			$table->string('jawaban_satu');
-			$table->string('jawaban_dua');
-			$table->string('jawaban_tiga');
-			$table->string('jawaban_empat');
-			$table->string('jawaban_lima');
+			$table->string('jawaban_satu', 31);
+			$table->string('jawaban_dua', 31);
+			$table->string('jawaban_tiga', 31);
+			$table->string('jawaban_empat', 31);
+			$table->string('jawaban_lima', 31);
 
 			$table->integer('id_detail_kuesioner')->unsigned();
 

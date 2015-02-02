@@ -25,6 +25,9 @@ Route::get('test', function(){
 
 Route::group(array('prefix' => 'api'), function() {
 
+	Route::post('login/auth','AuthController@login');
+    Route::get('login/destroy','AuthController@logout');
+
     Route::resource('bahan', 'BahanController');
 
 	Route::resource('pegawai', 'PegawaiController');
